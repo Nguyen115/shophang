@@ -35,15 +35,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Product Descprition</label>
-                                    <textarea style="resize:none"rows="5" class="form-control"name="product_decs" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_desc}}"></textarea>
+                                    <input type="text style="resize:none class="form-control"name="product_decs" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_desc}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Product Content</label>
-                                    <textarea style="resize:none"rows="5" class="form-control"name="product_content" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_content}}"></textarea>
+                                    <input type="text style="resize:none class="form-control"name="product_content" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_content}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Product Price</label>
-                                    <textarea style="resize:none"rows="5" class="form-control"name="product_price" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_price}}"></textarea>
+                                    <input stype="texttyle="resize:none class="form-control"name="product_price" id="exampleInputPassword1" placeholder="Password" value="{{$pro->product_price}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Show</label>

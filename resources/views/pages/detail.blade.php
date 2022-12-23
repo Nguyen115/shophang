@@ -54,6 +54,10 @@
                                 <p>{{$value->product_desc}}</p>
 
                                 <p>{{$value->product_content}}</p>
+                                @foreach ($category as $key => $cate)
+                                <p>{{$cate->category_name}}</p>
+                                <p>{{$cate->category_desc}}</p>
+                                @endforeach
 
                                 <div class="row">
                                     <div class="col-md-6">

@@ -46,5 +46,6 @@ Route::post('/update_product/{product_id}','App\Http\Controllers\ProductControll
 Route::get('/detail_product/{product_id}','App\Http\Controllers\ProductController@detail_product');
 Route::post('/save_cart','App\Http\Controllers\CartController@save_cart');
 Route::get('/show_cart','App\Http\Controllers\CartController@show_cart');
+Route::get('delete1_category_product/{category_product_id}', 'App\Http\Controllers\CategoryProduct@delete_category_product');
 
 

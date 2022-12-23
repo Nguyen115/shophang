@@ -28,10 +28,12 @@
         </div>
       </div>
     </div>
+
     <div class="table-responsive">
        <?php $message= Session::get('message');
         if($message)
         {echo $message;
+
         Session::put('message', null);}
         ?>
       <table class="table table-striped b-t b-light">
@@ -44,13 +46,14 @@
             </th>
             <th>Project</th>
             <th>Task</th>
-
+            <th>Desc</th>
             <th>Status</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
             @foreach($all_category_product as $key => $cate_pro)
+
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
             <td>{{$cate_pro->category_name}}</td>
@@ -68,6 +71,7 @@
               ?>
 
             </span></td>
+            <td>{{$cate_pro->category_desc}}</td>
             <td>
               <a href="{{URL::to('/edit_category_product/'.$cate_pro->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i></a>
               <a href="{{URL::to('/delete_category_product/'.$cate_pro->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>

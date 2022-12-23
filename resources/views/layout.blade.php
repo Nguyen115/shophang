@@ -68,7 +68,7 @@
 				</div>
 				<div class="col-md-6 col-xs-6 text-center menu-1">
 					<ul>
-						<li><a href=<?= url('shop'); ?>>Shop</a> </li>
+                        <li><a href=<?= url('shop'); ?>>Shop</a></li>
 						<li><a href=<?= url('aboutus'); ?>>About</a></li>
 						<li><a href=<?= url('service'); ?>>Services</a></li>
 						<li><a href=<?= url('contact'); ?>>Contact</a></li>
@@ -84,7 +84,7 @@
 						      </span>
 						    </div>
 						</li>
-						<li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
+						<li class="shopping-cart"><a href="<?= url('show_cart'); ?>" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
 					</ul>
 				</div>
 			</div>

@@ -57,14 +57,14 @@ class ProductController extends Controller
     }
     public function unactive_product($product_id)
     {
-        DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status' => 1]);
-        Session::put('message', 'Successfully unactive product');
+        DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status' => 0]);
+        Session::put('message', 'Successfully active product');
         return Redirect::to('/all_product');
     }
     public function active_product($product_id)
     {
-        DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status' => 0]);
-        Session::put('message', 'Successfully active product');
+        DB::table('tbl_product')->where('product_id', $product_id)->update(['product_status' => 1]);
+        Session::put('message', 'Successfully unactive product');
         return Redirect::to('/all_product');
     }
     public function edit_product($product_id)
@@ -113,8 +113,9 @@ class ProductController extends Controller
 
     public function detail_product($product_id)
     {
-        $cate_product = DB::table('tbl_category_product')->where('category_status', '0')->orderby('category_id', 'desc')->get();
+
         $detail_product = DB::table('tbl_product')->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')->where('tbl_product.product_id', $product_id)->get();
+        $cate_product = DB::table('tbl_category_product')->where('category_status', '0')->orderBy('category_id','desc')->get();
         return view('pages.detail')->with('category', $cate_product)->with('product_detail', $detail_product);
     }
 

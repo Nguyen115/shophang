@@ -33,7 +33,7 @@
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
                                 <a class="cart_quantity_up" href=""> + </a>
-                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                <input class="cart_quantity_input" type="text" name="qty" value="{{$v_content->qty}}" autocomplete="off" size="2">
                                 <a class="cart_quantity_down" href=""> - </a>
                             </div>
                         </td>
@@ -44,7 +44,7 @@
                             <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
                         </td>
                     </tr>
-@endforeach
+                    @endforeach
 
                 </tbody>
             </table>
